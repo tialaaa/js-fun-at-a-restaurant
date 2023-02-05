@@ -1,11 +1,8 @@
 function takeOrder(newOrder, ordersList) {
   if (ordersList.length < 3) {
-  return ordersList.push(newOrder);
-  } else {
-    return ordersList;
+    ordersList.push(newOrder);
   };
 };
-
 
 function refundOrder(id, ordersList) {
   for (var i = 0; i < ordersList.length; i++) {
@@ -13,21 +10,17 @@ function refundOrder(id, ordersList) {
       ordersList.splice(i,1);
     };
   };
-
-  return ordersList;
-}
-
+};
 
 function listItems(ordersList) {
   var itemsList = [];
 
   for (var i = 0; i < ordersList.length; i++) {
-    itemsList.push(ordersList[i].item)
+    itemsList.push(ordersList[i].item);
   };
 
   return itemsList.join(", ");
 };
-
 
 function searchOrder(ordersList, search) {
   for (var i = 0; i < ordersList.length; i++) {
@@ -38,7 +31,6 @@ function searchOrder(ordersList, search) {
 
   return false;
 };
-
 
 module.exports = {
   takeOrder,
