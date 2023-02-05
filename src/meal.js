@@ -12,12 +12,11 @@ function createMenuItem(nameInput, priceInput, typeInput) {
 };
 
 function addIngredients(newIngredient, ingredients){
-  if (ingredients.includes(newIngredient)){
+  if (ingredients.includes(newIngredient)) {
     return ingredients
   } else {
-  ingredients.push(newIngredient);
+    ingredients.push(newIngredient);
   }
-  return ingredients;
 };
 
 function formatPrice (initialPrice) {
@@ -36,7 +35,6 @@ function createRecipe(aTitle, someIngredients, aMenuItemType){
   };
   return recipe;
 };
-
 
 module.exports = {
   nameMenuItem,
